@@ -9,42 +9,38 @@ opts.set_headless()
 assert opts.headless  # operating in headless mode
 browser = Firefox(options=opts)
 
+def startup():
+  print('Hi, welcome to super-repl!')
+  print('Be sure to check out our website: 37x41.com')
+  iterations = input('How many processes would you like to run? ')
+  for i in range(iterations):
+    print('Process '+i+' Starting..')
+    forkAndRun()
+    print('Process '+i+' Completed!')
+    print(' ')
+
 def forkAndRun():
-  print('running')
-  # screenshot
-  browser.get_screenshot_as_file("capture_early.png")
-  print('screencap_early taken')
+  print('Loading..')
   # load slave node
   browser.get('https://repl.it/@yevbar/SlaveNode')
-  print('loaded slave node')
+  print('Loaded: Slave Node')
   # get current URL
   startingUrl = browser.current_url
   # fork it
   browser.find_element_by_css_selector('.jsx-4124301645.workspace-button').click()
-  print('clicked')
+  print('Forking..')
   # wait for URL to update (meaning fork is complete)
-  print('browser url: '+browser.current_url)
-  print('starting url: '+startingUrl)
   while(browser.current_url == startingUrl):
     # do nothing
-    print('waiting..')
     time.sleep(2)
-  print('exited while loop')
-  print('browser url: '+browser.current_url)
-  print('starting url: '+startingUrl)
+  print('Fork completed..')
   # start it (press run button)
   browser.find_element_by_css_selector('.jsx-3270404621.workspace-button').click()
-  print('clicked button')
+  print('Starting..')
   # wait 10 seconds (allow time to run)
   time.sleep(15)
-  print('slept 15s')
-  print('browser url: '+browser.current_url)
-  print('starting url: '+startingUrl)
-  # screenshot
-  browser.get_screenshot_as_file("capture.png")
-  print('screencap taken')
+  print('Running: Slave Node')
   # quit browser
-  browser.close()
-  print('browser closed!')
+  browser.Quit()
 
-forkAndRun()
+startup()
