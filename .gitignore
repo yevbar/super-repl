@@ -1,4 +1,3 @@
-generator/node_modules
-generator_py/geckodriver.log
-generator_py/capture.png
-generator_py/capture_early.png
+generator/geckodriver.log
+generator/capture.png
+generator/capture_early.png
