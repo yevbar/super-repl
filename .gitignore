@@ -1,1 +1,4 @@
 generator/node_modules
+generator_py/geckodriver.log
+generator_py/capture.png
+generator_py/capture_early.png
