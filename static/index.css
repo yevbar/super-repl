@@ -37,9 +37,27 @@ div.img {
   top: 26vh;
 }
 .front img {
-  height: 65vmin;
+  height: 58vmin;
 }
-@media screen and (max-width: 110vh){
+.people {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  padding-bottom: 10vh;
+  width: 60vw;
+}
+.people img{
+  width: 15vw;
+  border-radius: 10vw;
+  display: block;
+  margin-bottom: 4vh;
+}
+.people a {
+  font-size: 7vmin;
+  font-family: "Source Sans Pro";
+  text-decoration: underline;
+  color: white;
 }
 .section h2 {
   font-family: "IBM Plex Sans", sans-serif;
@@ -63,7 +81,7 @@ div.img {
   padding-bottom: 0;
   margin: auto;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 3vmax;
+  font-size: 2.7vmax;
   text-align: center;
 }
 .about {
