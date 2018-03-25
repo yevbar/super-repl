@@ -9,16 +9,19 @@ opts.set_headless()
 assert opts.headless  # operating in headless mode
 browser = Firefox(options=opts)
 
+# startup function - runs once per program
 def startup():
   print('Hi, welcome to super-repl!')
   print('Be sure to check out our website: 37x41.com')
-  iterations = input('How many processes would you like to run? ')
+  iterations_string = input('How many processes would you like to run? ')
+  iterations = int(iterations_string)
   for i in range(iterations):
-    print('Process '+i+' Starting..')
+    print('Process '+str(i)+' Starting..')
     forkAndRun()
-    print('Process '+i+' Completed!')
+    print('Process '+str(i)+' Completed!')
     print(' ')
 
+# called after user chooses # of processes
 def forkAndRun():
   print('Loading..')
   # load slave node
@@ -37,10 +40,10 @@ def forkAndRun():
   # start it (press run button)
   browser.find_element_by_css_selector('.jsx-3270404621.workspace-button').click()
   print('Starting..')
-  # wait 10 seconds (allow time to run)
-  time.sleep(15)
+  # wait 15 seconds (allow time to run)
+  time.sleep(30)
   print('Running: Slave Node')
   # quit browser
-  browser.Quit()
+  browser.quit()
 
 startup()
