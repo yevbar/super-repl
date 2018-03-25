@@ -40,8 +40,8 @@ def forkAndRun():
   # start it (press run button)
   browser.find_element_by_css_selector('.jsx-3270404621.workspace-button').click()
   print('Starting..')
-  # wait 15 seconds (allow time to run)
-  time.sleep(30)
+  # wait 20 seconds (allow time to run)
+  time.sleep(20)
   print('Running: Slave Node')
   # quit browser
   browser.quit()
