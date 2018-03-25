@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  text-align: center;
+  background-color: #121644;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+h1 {
+  width: 100vw;
+  position: relative;
+  right: 15vw;
+  font-family: "Space Mono", monospace;
+  font-size: 14vmin;
+  background: rgba(43, 22, 76, 0.6);
+  line-height: 25vmin;
+}
+.section {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(59, 101, 145,0.4);
+}
+.front {
+  height: 100vh;
+}
+div.img {
+  height: 65vmin;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 26vh;
+}
+.front img {
+  height: 65vmin;
+}
+@media screen and (max-width: 110vh){
+}
+.section h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 6.5vmax;
+  text-align: center;
+  width: 70vw;
+  padding-bottom: 8vmin;
+  padding-top: 8vmin;
+}
+.section p {
+  font-size: 2.4vmax;
+  width: 90%;
+  margin: auto;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.front h2 {
+  position: absolute;
+  bottom: 6vh;
+  left: 0;
+  right: 0;
+  padding-bottom: 0;
+  margin: auto;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3vmax;
+  text-align: center;
+}
+.about {
+  display: grid;
+  grid-template: "t t" auto
+                 "para demo" auto / 70% 30%;
+}
+.about h2 {
+  grid-area: t;
+}
+.about p {
+  grid-area: para;
+}
+.about a {
+  grid-area: demo;
+  font-family: "Source Sans Pro", sans-serif;
+  border-radius: 2vmin;
+  font-size: 4.5vmin;
+  color: #3a3a3a;
+  line-height: 10vmin;
+  box-shadow: 3px 4px #282828;
+  width: 70%;
+  height: 10vmin;
+  margin: auto;
+  background-color: #8aa7ce;
+  border: none;
+}
+a.ion-social-github {
+  z-index: 3;
+  color: #999999;
+  position: fixed;
+  bottom: 3vmax;
+  right: 4vmax;
+  font-size: 8vmax;
+  text-align: center;
+  line-height: 10vmax;
+  width: 10vmax;
+  height: 10vmax;
+  border-radius: 100%;
+  background: rgba(40, 40, 40, 0.7)
+}
+a:visited {
+  color: normal;
+}
+a{
+  text-decoration: none;
+}
