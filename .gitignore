@@ -1,1 +1,3 @@
-node_modules
+generator/geckodriver.log
+generator/capture.png
+generator/capture_early.png
